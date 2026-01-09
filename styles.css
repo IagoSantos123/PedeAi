@@ -1345,3 +1345,314 @@ textarea {
         max-width: 150px;
     }
 }
+
+/* ===== AJUSTES PARA MELHOR VISUALIZAÇÃO ===== */
+
+/* Logo no Hero - tamanho adequado */
+.logo-hero {
+    max-width: 300px !important;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Animação sutil para a logo */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Hero section ajustes */
+.hero .container {
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.9;
+}
+
+.stats {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.stat-item {
+    background: transparent;
+    border: none;
+    padding: var(--spacing-sm);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-shadow: 0 2px 10px rgba(255, 209, 102, 0.3);
+}
+
+.stat-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Botões hero */
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.cta-button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-button.primary {
+    background: linear-gradient(135deg, var(--secondary-color), #FF8C5A);
+    border: none;
+}
+
+.cta-button.secondary {
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* Ajustes responsivos */
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+        max-width: 800px;
+    }
+    
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--spacing-md);
+    }
+    
+    .logo-hero {
+        max-width: 400px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero .container {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .hero-content {
+        flex: 1;
+        text-align: left;
+        max-width: none;
+    }
+    
+    .hero-image {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .hero-buttons {
+        justify-content: flex-start;
+    }
+    
+    .hero-subtitle {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 600px;
+    }
+}
+
+/* Melhorias na seção soluções */
+.solution-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.solution-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.solution-features {
+    flex-grow: 1;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Melhorias na seção vantagens */
+.advantage-card {
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.advantage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Timeline mais visual */
+.step {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.step:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 209, 102, 0.05), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.step:hover:before {
+    transform: translateX(100%);
+}
+
+/* Depoimentos */
+.testimonial-card {
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Formulário mais atraente */
+.contact-form {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 209, 102, 0.1);
+}
+
+input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 0 2px rgba(255, 209, 102, 0.2);
+}
+
+/* Footer ajustes */
+.footer-logo i {
+    color: var(--accent-color);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* WhatsApp button */
+.whatsapp-float {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Loading state para botões */
+.cta-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Foco visível para acessibilidade */
+*:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Melhorias de performance */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Otimização para mobile */
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .stat-text {
+        font-size: 0.8rem;
+    }
+    
+    .logo-hero {
+        max-width: 250px !important;
+    }
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .stats {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .logo-hero {
+        max-width: 200px !important;
+    }
+}

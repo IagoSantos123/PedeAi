@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cardápio Digital | Solução para Restaurantes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="Gemini_Generated_Image_1bc5ga1bc5ga1bc5-removebg-preview.png" alt="Cardápio Digital" class="logo-img">
+            </div>
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#solucoes">Soluções</a></li>
+                    <li><a href="#vantagens">Vantagens</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <button class="cta-button header-cta" id="header-cta">Começar Agora</button>
+        </div>
+    </header>
+
+    <!-- Seção Hero -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Transforme seu restaurante com <span class="highlight">Autoatendimento</span></h1>
+                <p class="hero-subtitle">Solução completa para delivery, tablet e QR Code. Aumente suas vendas e reduza custos com tecnologia de ponta.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">+40%</div>
+                        <div class="stat-text">Aumento no lucro</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">-30%</div>
+                        <div class="stat-text">Redução de custos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">+50%</div>
+                        <div class="stat-text">Mais agilidade</div>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="cta-button primary" id="hero-cta">
+                        <i class="fas fa-play-circle"></i> Ver Demonstração
+                    </button>
+                    <button class="cta-button secondary">
+                        <i class="fas fa-comment-alt"></i> Falar com Especialista
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="device-showcase">
+                        <source media="(min-width: 768px)" srcset="caminho/imagem-desktop.jpg">
+                        <source media="(max-width: 767px)" srcset="caminho/imagem-mobile.jpg">
+                        <img src="/logopedeai-removebg-preview.png" alt="Demonstração do aplicativo" class="showcase-image">
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Soluções -->
+    <section class="solutions" id="solucoes">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossas <span class="highlight">Soluções</span></h2>
+                <p class="section-subtitle">Oferecemos exatamente o que você precisa para modernizar seu restaurante</p>
+            </div>
+            
+            <div class="solutions-grid">
+                <!-- Card Delivery -->
+                <div class="solution-card">
+                    <div class="solution-icon delivery">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <h3>Delivery</h3>
+                    <p>Cardápio digital para pedidos de entrega via WhatsApp, redes sociais e link próprio.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check-circle"></i> Pedidos via WhatsApp</li>
+                        <li><i class="fas fa-check-circle"></i> Zero taxas por pedido</li>
+                        <li><i class="fas fa-check-circle"></i> Integração com iFood</li>
+                        <li><i class="fas fa-check-circle"></i> Atendente virtual 24h</li>
+                    </ul>
+                    <button class="solution-button">Saiba mais</button>
+                </div>
+                
+                <!-- Card Tablet -->
+                <div class="solution-card">
+                    <div class="solution-icon tablet">
+                        <i class="fas fa-tablet-alt"></i>
+                    </div>
+                    <h3>Tablet</h3>
+                    <p>Cardápio digital em tablets para mesas, com fotos atrativas e personalização de pedidos.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check-circle"></i> Fotos em alta qualidade</li>
+                        <li><i class="fas fa-check-circle"></i> Personalização do pedido</li>
+                        <li><i class="fas fa-check-circle"></i> Destaque de promoções</li>
+                        <li><i class="fas fa-check-circle"></i> Avaliação do restaurante</li>
+                    </ul>
+                    <button class="solution-button">Saiba mais</button>
+                </div>
+                
+                <!-- Card QR Code -->
+                <div class="solution-card">
+                    <div class="solution-icon qrcode">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <h3>QR Code</h3>
+                    <p>Clientes escaneiam o código e acessam o cardápio diretamente no celular.</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check-circle"></i> Cardápio no celular</li>
+                        <li><i class="fas fa-check-circle"></i> Sem necessidade de app</li>
+                        <li><i class="fas fa-check-circle"></i> Pedidos direto na cozinha</li>
+                        <li><i class="fas fa-check-circle"></i> Mesa, comanda ou balcão</li>
+                    </ul>
+                    <button class="solution-button">Saiba mais</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Vantagens -->
+    <section class="advantages" id="vantagens">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Vantagens do <span class="highlight">Cardápio Digital</span></h2>
+                <p class="section-subtitle">Descubra como podemos transformar o seu negócio</p>
+            </div>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Aumento de Lucros</h3>
+                    <p>Facilite pedidos de acompanhamentos, bebidas e sobremesas, aumentando o ticket médio em até 40%.</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Redução de Custos</h3>
+                    <p>Reduza em até 50% a necessidade de contratação adicional de garçons e freelancers.</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Operação Ágil</h3>
+                    <p>Elimine erros de anotação e reduza o tempo de espera dos clientes significativamente.</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Integração com PDV</h3>
+                    <p>Simplifique processos financeiros e o fechamento de contas com integração total ao seu sistema.</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Experiência do Cliente</h3>
+                    <p>Ofereça uma experiência moderna e conveniente que fideliza clientes e atrai novos.</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Relatórios Detalhados</h3>
+                    <p>Acompanhe métricas importantes e tome decisões baseadas em dados reais do seu negócio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Como Funciona -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Como <span class="highlight">Funciona</span></h2>
+                <p class="section-subtitle">4 passos simples para começar a usar hoje mesmo</p>
+            </div>
+            
+            <div class="steps-timeline">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Cadastro Rápido</h3>
+                        <p>Faça seu cadastro em menos de 5 minutos e acesse o painel administrativo.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Configure seu Cardápio</h3>
+                        <p>Adicione produtos, preços, fotos e descrições através de uma interface intuitiva.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Personalize sua Marca</h3>
+                        <p>Aplique suas cores, logo e identidade visual para manter sua marca consistente.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Comece a Vender</h3>
+                        <p>Pronto! Seus clientes já podem fazer pedidos de forma moderna e eficiente.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-illustration">
+                <div class="timeline-device phone">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Smartphone</span>
+                </div>
+                <div class="timeline-device tablet">
+                    <i class="fas fa-tablet-alt"></i>
+                    <span>Tablet</span>
+                </div>
+                <div class="timeline-device qr">
+                    <i class="fas fa-qrcode"></i>
+                    <span>QR Code</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Depoimentos -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">O que dizem nossos <span class="highlight">Clientes</span></h2>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Implementamos o cardápio digital e em 1 mês aumentamos 35% nas vendas. Os clientes adoram a praticidade!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Carlos Silva</h4>
+                            <p>Pizzaria Bella Napoli</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Reduzimos 40% dos custos com garçons. O atendimento ficou muito mais ágil e os erros zeraram."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Ana Santos</h4>
+                            <p>Restaurante Sabor Mineiro</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"A experiência do QR Code é incrível! Os clientes fazem os pedidos pelo celular e a ordem vai direto para a cozinha."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Roberto Alves</h4>
+                            <p>Hamburgueria Artesanal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Entre em <span class="highlight">Contato</span></h2>
+                <p class="section-subtitle">Solicite uma demonstração gratuita e transforme seu restaurante</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Telefone</h3>
+                        <p>(11) 99999-9999</p>
+                        <small>Segunda a Sexta, 9h às 18h</small>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>E-mail</h3>
+                        <p>contato@cardapiodigital.com</p>
+                        <small>Respondemos em até 24h</small>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p>(11) 98888-8888</p>
+                        <small>Atendimento rápido</small>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-form">
+                    <h3>Solicite uma Demonstração</h3>
+                    
+                    <div class="form-group">
+                        <input type="text" placeholder="Seu nome completo" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" placeholder="Seu melhor e-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Telefone com DDD" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" placeholder="Nome do seu restaurante" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select required>
+                            <option value="" disabled selected>Selecione seu interesse</option>
+                            <option value="delivery">Cardápio Delivery</option>
+                            <option value="tablet">Cardápio em Tablet</option>
+                            <option value="qrcode">Cardápio QR Code</option>
+                            <option value="todos">Todas as opções</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea placeholder="Conte-nos sobre seu restaurante..." rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="cta-button primary full-width">
+                        <i class="fas fa-paper-plane"></i> Enviar Solicitação
+                    </button>
+                    
+                    <p class="form-footer">Entraremos em contato em até 2 horas úteis</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <div>
+                            <h3>Cardápio<span>Digital</span></h3>
+                            <p>Solução completa para restaurantes</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Transformamos restaurantes tradicionais em negócios digitais de sucesso.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Soluções</h4>
+                    <ul>
+                        <li><a href="#solucoes">Cardápio Delivery</a></li>
+                        <li><a href="#solucoes">Cardápio Tablet</a></li>
+                        <li><a href="#solucoes">Cardápio QR Code</a></li>
+                        <li><a href="#solucoes">Integração PDV</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#vantagens">Vantagens</a></li>
+                        <li><a href="#como-funciona">Como Funciona</a></li>
+                        <li><a href="#precos">Planos e Preços</a></li>
+                        <li><a href="#faq">Perguntas Frequentes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Receba dicas exclusivas para seu restaurante</p>
+                    <form id="newsletter-form">
+                        <div class="newsletter-input">
+                            <input type="email" placeholder="Seu e-mail" required>
+                            <button type="submit" aria-label="Inscrever">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <p class="newsletter-note">Sem spam, apenas conteúdo útil.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cardápio Digital. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

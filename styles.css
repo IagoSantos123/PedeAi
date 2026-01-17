@@ -4999,3 +4999,80 @@ img {
         gap: 8px !important;
     }
 }
+
+/* ===== CORREÇÕES CRÍTICAS PARA CLICKS NO DESKTOP ===== */
+
+/* GARANTE que os botões são clicáveis em todos os dispositivos */
+.demo-tab {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    user-select: none;
+    position: relative;
+    z-index: 10;
+}
+
+/* Remove qualquer overlay que possa estar bloqueando cliques */
+.demo-tab::before,
+.demo-tab::after {
+    pointer-events: none !important;
+}
+
+/* Corrige o z-index da navegação */
+.demo-navigation {
+    position: relative;
+    z-index: 1000 !important;
+}
+
+/* Remove qualquer propriedade que possa bloquear cliques */
+.demo-tab * {
+    pointer-events: auto !important;
+}
+
+/* Corrige para telas grandes (desktop) */
+@media (min-width: 768px) {
+    .demo-tab {
+        min-height: auto !important;
+        pointer-events: auto !important;
+        cursor: pointer !important;
+    }
+    
+    .demo-tab:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4) !important;
+    }
+    
+    .demo-tab:active {
+        transform: translateY(0) !important;
+    }
+}
+
+/* Corrige especificamente para desktop */
+@media (hover: hover) and (pointer: fine) {
+    .demo-tab {
+        cursor: pointer !important;
+        pointer-events: auto !important;
+    }
+    
+    .demo-tab:hover {
+        background: rgba(255, 255, 255, 0.15) !important;
+    }
+}
+
+/* ===== DEBUG - Para testar se elementos são clicáveis ===== */
+.demo-tab.debug-click {
+    border: 2px solid #00ff00 !important;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { border-color: #00ff00; }
+    50% { border-color: #00cc00; }
+}
+
+/* ===== CORREÇÃO DE FALLBACK ===== */
+/* Se nada funcionar, este CSS força a clicabilidade */
+body:not(.mobile) .demo-tab,
+html:not(.touch) .demo-tab {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}

@@ -253,78 +253,880 @@
         </div>
     </section>
 
-    <!-- Resto do código permanece igual (depoimentos, contato, rodapé) -->
-    <!-- Seção Depoimentos -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Restaurantes que <span class="highlight">Aceleraram</span></h2>
-                <p class="section-subtitle">Veja como o autoatendimento transformou estes estabelecimentos</p>
+    <!-- Seção Demonstração do Sistema -->
+<section class="system-demo" id="demo">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Sistema <span class="highlight">em Ação</span></h2>
+            <p class="section-subtitle">Veja como cada funcionalidade funciona na prática</p>
+        </div>
+        
+        <div class="demo-navigation">
+            <div class="demo-tabs">
+                <button class="demo-tab active" data-tab="dashboard">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </button>
+                <button class="demo-tab" data-tab="order">
+                    <i class="fas fa-qrcode"></i> Pedido na Mesa
+                </button>
+                <button class="demo-tab" data-tab="kitchen">
+                    <i class="fas fa-utensils"></i> Cozinha
+                </button>
+                <button class="demo-tab" data-tab="whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp IA
+                </button>
+                <button class="demo-tab" data-tab="clients">
+                    <i class="fas fa-users"></i> Clientes
+                </button>
+                <button class="demo-tab" data-tab="consulting">
+                    <i class="fas fa-chart-line"></i> Consultoria
+                </button>
+            </div>
+        </div>
+        
+        <!-- Tela: Dashboard -->
+        <div class="demo-screen active" id="dashboard-screen">
+            <div class="screen-header">
+                <h3><i class="fas fa-tachometer-alt"></i> Dashboard em Tempo Real</h3>
+                <span class="screen-time">Atualizado agora</span>
             </div>
             
-            <div class="testimonials-slider">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Com o autoatendimento, reduzimos o tempo de espera em 65%. Clientes felizes e atendimento mais eficiente!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
+            <div class="screen-content dashboard-screen">
+                <!-- Status Geral -->
+                <div class="screen-row">
+                    <div class="status-card">
+                        <div class="status-icon busy">
+                            <i class="fas fa-chair"></i>
                         </div>
-                        <div class="author-info">
-                            <h4>Carlos Silva</h4>
-                            <p>Pizzaria Express - São Paulo</p>
+                        <div class="status-info">
+                            <h4>Mesas Ocupadas</h4>
+                            <div class="status-value">14/25</div>
+                            <div class="status-progress">
+                                <div class="progress" style="width: 56%"></div>
+                            </div>
+                            <div class="status-detail">4 aguardando pedido</div>
+                        </div>
+                    </div>
+                    
+                    <div class="status-card">
+                        <div class="status-icon alert">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="status-info">
+                            <h4>Tempo Médio</h4>
+                            <div class="status-value">18 min</div>
+                            <div class="status-progress">
+                                <div class="progress" style="width: 45%"></div>
+                            </div>
+                            <div class="status-detail">3 pedidos atrasados</div>
+                        </div>
+                    </div>
+                    
+                    <div class="status-card">
+                        <div class="status-icon success">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="status-info">
+                            <h4>Pedidos Hoje</h4>
+                            <div class="status-value">86</div>
+                            <div class="status-progress">
+                                <div class="progress" style="width: 65%"></div>
+                            </div>
+                            <div class="status-detail">Meta: 132 pedidos</div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p class="testimonial-text">"Na hora do almoço, atendemos 40% mais clientes. O sistema de QR Code foi revolucionário para nós."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
+                <!-- Lista de Pedidos Ativos -->
+                <div class="screen-row">
+                    <div class="orders-panel">
+                        <div class="panel-header">
+                            <h4><i class="fas fa-list-alt"></i> Pedidos Ativos</h4>
+                            <div class="panel-filter">
+                                <span class="filter-active">Todos</span>
+                                <span>Preparação</span>
+                                <span>Prontos</span>
+                            </div>
                         </div>
-                        <div class="author-info">
-                            <h4>Ana Santos</h4>
-                            <p>Lanches Rápidos - Rio de Janeiro</p>
+                        
+                        <div class="orders-list">
+                            <div class="order-card preparing">
+                                <div class="order-header">
+                                    <span class="order-id">#058</span>
+                                    <span class="order-table">Mesa 12</span>
+                                    <span class="order-time">há 15min</span>
+                                </div>
+                                <div class="order-items">
+                                    <span class="item">2x Pizza Calabresa</span>
+                                    <span class="item">1x Refri 2L</span>
+                                </div>
+                                <div class="order-status">
+                                    <span class="status-badge preparing">Em preparo</span>
+                                    <button class="status-action"><i class="fas fa-bell"></i> Notificar</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-card ready">
+                                <div class="order-header">
+                                    <span class="order-id">#057</span>
+                                    <span class="order-table">Mesa 08</span>
+                                    <span class="order-time">há 8min</span>
+                                </div>
+                                <div class="order-items">
+                                    <span class="item">1x X-Burger Completo</span>
+                                    <span class="item">1x Batata Frita</span>
+                                </div>
+                                <div class="order-status">
+                                    <span class="status-badge ready">Pronto para entrega</span>
+                                    <button class="status-action"><i class="fas fa-check"></i> Entregue</button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-card waiting">
+                                <div class="order-header">
+                                    <span class="order-id">#059</span>
+                                    <span class="order-table">Mesa 05</span>
+                                    <span class="order-time">há 22min</span>
+                                </div>
+                                <div class="order-items">
+                                    <span class="item">3x Porção de Frango</span>
+                                    <span class="item">2x Cerveja</span>
+                                </div>
+                                <div class="order-status">
+                                    <span class="status-badge waiting">Aguardando</span>
+                                    <button class="status-action"><i class="fas fa-exclamation"></i> Priorizar</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Erros de pedido zeraram e o ticket médio aumentou 45%. Melhor investimento que fizemos!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
+                    
+                    <!-- Mapa de Mesas -->
+                    <div class="tables-panel">
+                        <div class="panel-header">
+                            <h4><i class="fas fa-map"></i> Mapa de Mesas</h4>
                         </div>
-                        <div class="author-info">
-                            <h4>Roberto Alves</h4>
-                            <p>Hamburgueria Tech - Belo Horizonte</p>
+                        <div class="tables-grid">
+                            <div class="table occupied" data-table="1">
+                                <span class="table-number">01</span>
+                                <span class="table-status">25min</span>
+                            </div>
+                            <div class="table free" data-table="2">
+                                <span class="table-number">02</span>
+                                <span class="table-status">Livre</span>
+                            </div>
+                            <div class="table occupied" data-table="3">
+                                <span class="table-number">03</span>
+                                <span class="table-status">18min</span>
+                            </div>
+                            <div class="table waiting" data-table="4">
+                                <span class="table-number">04</span>
+                                <span class="table-status">Espera</span>
+                            </div>
+                            <div class="table occupied" data-table="5">
+                                <span class="table-number">05</span>
+                                <span class="table-status">22min</span>
+                            </div>
+                            <!-- Mais mesas... -->
+                        </div>
+                        <div class="tables-legend">
+                            <div class="legend-item">
+                                <span class="legend-color occupied"></span>
+                                <span>Ocupada</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color free"></span>
+                                <span>Livre</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color waiting"></span>
+                                <span>Aguardando</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        
+        <!-- Tela: Pedido na Mesa -->
+        <div class="demo-screen" id="order-screen">
+            <div class="screen-header">
+                <h3><i class="fas fa-mobile-alt"></i> Pedido Direto na Mesa</h3>
+                <span class="screen-time">Visualização do cliente</span>
+            </div>
+            
+            <div class="screen-content order-screen">
+                <!-- Simulação de celular -->
+                <div class="mobile-device">
+                    <div class="mobile-header">
+                        <div class="mobile-notch"></div>
+                        <div class="mobile-time">14:30</div>
+                    </div>
+                    
+                    <div class="mobile-content">
+                        <!-- Passo 1: Cardápio -->
+                        <div class="order-step active" data-step="menu">
+                            <div class="step-header">
+                                <h4>Cardápio Digital</h4>
+                                <div class="table-info">Mesa #12</div>
+                            </div>
+                            
+                            <div class="menu-categories">
+                                <div class="category active">Pizzas</div>
+                                <div class="category">Burgers</div>
+                                <div class="category">Bebidas</div>
+                                <div class="category">Sobremesas</div>
+                            </div>
+                            
+                            <div class="menu-items">
+                                <div class="menu-item">
+                                    <div class="item-info">
+                                        <h5>Pizza Calabresa</h5>
+                                        <p>Calabresa, queijo, molho especial</p>
+                                        <span class="item-price">R$ 45,90</span>
+                                    </div>
+                                    <button class="add-item"><i class="fas fa-plus"></i></button>
+                                </div>
+                                
+                                <div class="menu-item">
+                                    <div class="item-info">
+                                        <h5>Pizza Margherita</h5>
+                                        <p>Tomate, mussarela, manjericão</p>
+                                        <span class="item-price">R$ 42,90</span>
+                                    </div>
+                                    <button class="add-item"><i class="fas fa-plus"></i></button>
+                                </div>
+                                
+                                <div class="menu-item">
+                                    <div class="item-info">
+                                        <h5>Pizza 4 Queijos</h5>
+                                        <p>Mussarela, parmesão, gorgonzola, catupiry</p>
+                                        <span class="item-price">R$ 48,90</span>
+                                    </div>
+                                    <button class="add-item"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="order-summary">
+                                <div class="summary-header">
+                                    <span>Seu Pedido</span>
+                                    <span class="item-count">2 itens</span>
+                                </div>
+                                <div class="summary-items">
+                                    <div class="summary-item">
+                                        <span>1x Pizza Calabresa</span>
+                                        <span>R$ 45,90</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span>1x Refri 2L</span>
+                                        <span>R$ 12,90</span>
+                                    </div>
+                                </div>
+                                <div class="summary-total">
+                                    <span>Total</span>
+                                    <span class="total-value">R$ 58,80</span>
+                                </div>
+                                <button class="next-step">Finalizar Pedido <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        
+                        <!-- Passo 2: Cadastro -->
+                        <div class="order-step" data-step="register">
+                            <div class="step-header">
+                                <h4>Complete Seus Dados</h4>
+                                <p>Receba ofertas especiais!</p>
+                            </div>
+                            
+                            <div class="register-form">
+                                <div class="form-group">
+                                    <label>Nome Completo</label>
+                                    <input type="text" placeholder="Digite seu nome" value="João Silva">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>WhatsApp</label>
+                                    <input type="tel" placeholder="(11) 99999-9999" value="(11) 98765-4321">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Data de Aniversário</label>
+                                    <input type="date" value="1990-05-15">
+                                </div>
+                                
+                                <div class="form-consent">
+                                    <label class="checkbox">
+                                        <input type="checkbox" checked>
+                                        <span>Aceito receber ofertas por WhatsApp</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="step-actions">
+                                <button class="step-back"><i class="fas fa-arrow-left"></i> Voltar</button>
+                                <button class="step-complete">Finalizar <i class="fas fa-check"></i></button>
+                            </div>
+                        </div>
+                        
+                        <!-- Passo 3: Confirmação -->
+                        <div class="order-step" data-step="confirmation">
+                            <div class="confirmation-screen">
+                                <div class="confirmation-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h4>Pedido Confirmado!</h4>
+                                <p>Nº do pedido: <strong>#058</strong></p>
+                                <p class="confirmation-time">Tempo estimado: 15-20 minutos</p>
+                                <div class="confirmation-alert">
+                                    <i class="fas fa-bell"></i>
+                                    <p>Te avisaremos pelo WhatsApp quando estiver pronto!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="screen-info">
+                    <h4>Como funciona:</h4>
+                    <div class="info-steps">
+                        <div class="info-step active">
+                            <span class="step-number">1</span>
+                            <div>
+                                <h5>QR Code na Mesa</h5>
+                                <p>Cliente escaneia e acessa o cardápio digital completo</p>
+                            </div>
+                        </div>
+                        <div class="info-step">
+                            <span class="step-number">2</span>
+                            <div>
+                                <h5>Pedido Personalizado</h5>
+                                <p>Adiciona itens, observações e finaliza de forma autônoma</p>
+                            </div>
+                        </div>
+                        <div class="info-step">
+                            <span class="step-number">3</span>
+                            <div>
+                                <h5>Cadastro Durante Compra</h5>
+                                <p>Solicita nome, telefone e data de aniversário</p>
+                            </div>
+                        </div>
+                        <div class="info-step">
+                            <span class="step-number">4</span>
+                            <div>
+                                <h5>Envio Direto à Cozinha</h5>
+                                <p>Pedido vai automaticamente para preparação</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tela: Cozinha -->
+        <div class="demo-screen" id="kitchen-screen">
+            <div class="screen-header">
+                <h3><i class="fas fa-utensils"></i> Sistema da Cozinha</h3>
+                <span class="screen-time">Visualização do chef</span>
+            </div>
+            
+            <div class="screen-content kitchen-screen">
+                <!-- Pedidos em Andamento -->
+                <div class="kitchen-section">
+                    <h4><i class="fas fa-list"></i> Pedidos para Preparar</h4>
+                    <div class="kitchen-orders">
+                        <div class="kitchen-order">
+                            <div class="order-main">
+                                <div class="order-header">
+                                    <span class="order-id">#058</span>
+                                    <span class="order-table">Mesa 12</span>
+                                    <span class="order-time">há 2min</span>
+                                </div>
+                                <div class="order-items">
+                                    <div class="kitchen-item">
+                                        <span class="item-name">Pizza Calabresa</span>
+                                        <span class="item-qty">2x</span>
+                                        <span class="item-status preparing">Em preparo</span>
+                                    </div>
+                                    <div class="kitchen-item">
+                                        <span class="item-name">Refri 2L</span>
+                                        <span class="item-qty">1x</span>
+                                        <span class="item-status pending">Pendente</span>
+                                    </div>
+                                </div>
+                                <div class="order-notes">
+                                    <i class="fas fa-sticky-note"></i>
+                                    <span>Sem cebola, borda recheada</span>
+                                </div>
+                            </div>
+                            <div class="order-actions">
+                                <button class="action-btn start"><i class="fas fa-play"></i> Iniciar</button>
+                                <button class="action-btn finish"><i class="fas fa-check"></i> Finalizar</button>
+                                <button class="action-btn alert"><i class="fas fa-clock"></i> Atraso</button>
+                            </div>
+                        </div>
+                        
+                        <div class="kitchen-order">
+                            <div class="order-main">
+                                <div class="order-header">
+                                    <span class="order-id">#057</span>
+                                    <span class="order-table">Mesa 08</span>
+                                    <span class="order-time">há 15min</span>
+                                </div>
+                                <div class="order-items">
+                                    <div class="kitchen-item">
+                                        <span class="item-name">X-Burger Completo</span>
+                                        <span class="item-qty">1x</span>
+                                        <span class="item-status ready">Pronto</span>
+                                    </div>
+                                    <div class="kitchen-item">
+                                        <span class="item-name">Batata Frita</span>
+                                        <span class="item-qty">1x</span>
+                                        <span class="item-status ready">Pronto</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-actions">
+                                <button class="action-btn notify"><i class="fas fa-bell"></i> Notificar Cliente</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tempos de Preparo -->
+                <div class="kitchen-section">
+                    <h4><i class="fas fa-chart-bar"></i> Estatísticas da Cozinha</h4>
+                    <div class="kitchen-stats">
+                        <div class="stat-card">
+                            <div class="stat-value">18 min</div>
+                            <div class="stat-label">Tempo médio</div>
+                            <div class="stat-trend down">-3min</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-value">94%</div>
+                            <div class="stat-label">No prazo</div>
+                            <div class="stat-trend up">+2%</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-value">3</div>
+                            <div class="stat-label">Pedidos ativos</div>
+                            <div class="stat-trend neutral">-</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tela: WhatsApp IA -->
+        <div class="demo-screen" id="whatsapp-screen">
+            <div class="screen-header">
+                <h3><i class="fab fa-whatsapp"></i> WhatsApp com Inteligência Artificial</h3>
+                <span class="screen-time">Campanhas automáticas</span>
+            </div>
+            
+            <div class="screen-content whatsapp-screen">
+                <!-- Simulação de conversa WhatsApp -->
+                <div class="whatsapp-chat">
+                    <div class="chat-header">
+                        <div class="contact-info">
+                            <div class="contact-avatar">JS</div>
+                            <div>
+                                <h4>João Silva</h4>
+                                <p>Último pedido: 15 dias atrás</p>
+                            </div>
+                        </div>
+                        <div class="contact-tags">
+                            <span class="tag aniversario">Aniversário em 2 dias</span>
+                            <span class="tag inativo">15 dias sem pedir</span>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-messages">
+                        <!-- Mensagem do sistema -->
+                        <div class="message system">
+                            <div class="message-content">
+                                <p>Olá João! Vimos que seu aniversário é daqui 2 dias 🎉</p>
+                                <p>Preparei uma oferta especial para você:</p>
+                                <div class="offer-card">
+                                    <h5>Presente de Aniversário!</h5>
+                                    <p>30% de desconto em qualquer pedido</p>
+                                    <div class="offer-code">CUPOM: FELIZANIVERSARIO30</div>
+                                    <p class="offer-valid">Válido por 7 dias</p>
+                                </div>
+                                <p>Para usar, é só fazer seu pedido normalmente!</p>
+                            </div>
+                            <div class="message-time">14:30 • IA</div>
+                        </div>
+                        
+                        <!-- Resposta do cliente -->
+                        <div class="message client">
+                            <div class="message-content">
+                                <p>Obrigado! Vou pedir hoje mesmo 😊</p>
+                            </div>
+                            <div class="message-time">14:31 • Cliente</div>
+                        </div>
+                        
+                        <!-- Seguimento automático -->
+                        <div class="message system">
+                            <div class="message-content">
+                                <p>Perfeito! Lembrando que você gosta de Pizza Calabresa 🍕</p>
+                                <p>Que tal experimentar nossa nova Pizza Calabresa Supreme?</p>
+                            </div>
+                            <div class="message-time">14:32 • IA</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tipos de Campanhas -->
+                <div class="campaigns-panel">
+                    <h4><i class="fas fa-bullhorn"></i> Campanhas Automáticas</h4>
+                    
+                    <div class="campaign-list">
+                        <div class="campaign-item active">
+                            <div class="campaign-icon">
+                                <i class="fas fa-birthday-cake"></i>
+                            </div>
+                            <div class="campaign-info">
+                                <h5>Aniversário</h5>
+                                <p>Envio automático 2 dias antes</p>
+                                <div class="campaign-stats">
+                                    <span>Taxa de conversão: 42%</span>
+                                </div>
+                            </div>
+                            <div class="campaign-status on">Ativa</div>
+                        </div>
+                        
+                        <div class="campaign-item">
+                            <div class="campaign-icon">
+                                <i class="fas fa-user-clock"></i>
+                            </div>
+                            <div class="campaign-info">
+                                <h5>Reengajamento</h5>
+                                <p>Cliente 15+ dias sem pedir</p>
+                                <div class="campaign-stats">
+                                    <span>Taxa de retorno: 38%</span>
+                                </div>
+                            </div>
+                            <div class="campaign-status on">Ativa</div>
+                        </div>
+                        
+                        <div class="campaign-item">
+                            <div class="campaign-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="campaign-info">
+                                <h5>Clientes VIP</h5>
+                                <p>Ofertas exclusivas mensais</p>
+                                <div class="campaign-stats">
+                                    <span>Ticket médio: R$ 85</span>
+                                </div>
+                            </div>
+                            <div class="campaign-status on">Ativa</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-features">
+                        <h5><i class="fas fa-robot"></i> Recursos de IA</h5>
+                        <ul>
+                            <li>Mensagens personalizadas com base no histórico</li>
+                            <li>Análise de melhor horário para envio</li>
+                            <li>Sugestões de produtos baseadas no gosto do cliente</li>
+                            <li>Respostas automáticas a perguntas frequentes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tela: Gestão de Clientes -->
+        <div class="demo-screen" id="clients-screen">
+            <div class="screen-header">
+                <h3><i class="fas fa-users"></i> Base de Clientes Inteligente</h3>
+                <span class="screen-time">259 clientes cadastrados</span>
+            </div>
+            
+            <div class="screen-content clients-screen">
+                <!-- Lista de Clientes -->
+                <div class="clients-list">
+                    <div class="list-header">
+                        <h4><i class="fas fa-list"></i> Clientes Recentes</h4>
+                        <div class="list-filter">
+                            <input type="text" placeholder="Buscar cliente...">
+                            <select>
+                                <option>Todos</option>
+                                <option>VIP</option>
+                                <option>Aniversariantes</option>
+                                <option>Inativos</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <table class="clients-table">
+                        <thead>
+                            <tr>
+                                <th>Cliente</th>
+                                <th>Último Pedido</th>
+                                <th>Total Gasto</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="client-info">
+                                    <div class="client-avatar">JS</div>
+                                    <div>
+                                        <div class="client-name">João Silva</div>
+                                        <div class="client-contact">(11) 98765-4321</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>15/10/2024</div>
+                                    <div class="client-time">há 15 dias</div>
+                                </td>
+                                <td>R$ 1.240,50</td>
+                                <td>
+                                    <span class="client-tag vip">VIP</span>
+                                    <span class="client-tag birthday">Aniversário</span>
+                                </td>
+                                <td>
+                                    <button class="table-action"><i class="fas fa-envelope"></i></button>
+                                    <button class="table-action"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="client-info">
+                                    <div class="client-avatar">MA</div>
+                                    <div>
+                                        <div class="client-name">Maria Andrade</div>
+                                        <div class="client-contact">(11) 97654-3210</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>Hoje</div>
+                                    <div class="client-time">há 2 horas</div>
+                                </td>
+                                <td>R$ 890,25</td>
+                                <td>
+                                    <span class="client-tag active">Ativa</span>
+                                </td>
+                                <td>
+                                    <button class="table-action"><i class="fas fa-envelope"></i></button>
+                                    <button class="table-action"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="client-info">
+                                    <div class="client-avatar">PS</div>
+                                    <div>
+                                        <div class="client-name">Pedro Santos</div>
+                                        <div class="client-contact">(11) 96543-2109</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>01/10/2024</div>
+                                    <div class="client-time inactive">há 30 dias</div>
+                                </td>
+                                <td>R$ 540,80</td>
+                                <td>
+                                    <span class="client-tag inactive">Inativo</span>
+                                </td>
+                                <td>
+                                    <button class="table-action"><i class="fas fa-redo"></i></button>
+                                    <button class="table-action"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Análise de Clientes -->
+                <div class="clients-analytics">
+                    <h4><i class="fas fa-chart-pie"></i> Análise da Base</h4>
+                    
+                    <div class="analytics-grid">
+                        <div class="analytic-card">
+                            <div class="analytic-value">42%</div>
+                            <div class="analytic-label">Clientes VIP</div>
+                            <div class="analytic-detail">+8% este mês</div>
+                        </div>
+                        
+                        <div class="analytic-card">
+                            <div class="analytic-value">R$ 85</div>
+                            <div class="analytic-label">Ticket médio</div>
+                            <div class="analytic-detail">+12% vs mês passado</div>
+                        </div>
+                        
+                        <div class="analytic-card">
+                            <div class="analytic-value">2,3x</div>
+                            <div class="analytic-label">Frequência média</div>
+                            <div class="analytic-detail">visitas por mês</div>
+                        </div>
+                    </div>
+                    
+                    <div class="segmentation">
+                        <h5>Segmentação Automática</h5>
+                        <div class="segments">
+                            <div class="segment">
+                                <span class="segment-name">Aniversariantes do mês</span>
+                                <span class="segment-count">18 clientes</span>
+                            </div>
+                            <div class="segment">
+                                <span class="segment-name">15+ dias sem pedir</span>
+                                <span class="segment-count">42 clientes</span>
+                            </div>
+                            <div class="segment">
+                                <span class="segment-name">Potenciais VIP</span>
+                                <span class="segment-count">26 clientes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tela: Consultoria -->
+        <div class="demo-screen" id="consulting-screen">
+            <div class="screen-header">
+                <h3><i class="fas fa-chart-line"></i> Consultoria de Remarketing</h3>
+                <span class="screen-time">Análise mensal</span>
+            </div>
+            
+            <div class="screen-content consulting-screen">
+                <!-- Dashboard de Consultoria -->
+                <div class="consulting-dashboard">
+                    <div class="kpi-cards">
+                        <div class="kpi-card">
+                            <div class="kpi-header">
+                                <h5>ROI Campanhas</h5>
+                                <span class="kpi-trend up">+28%</span>
+                            </div>
+                            <div class="kpi-value">315%</div>
+                            <div class="kpi-chart">
+                                <div class="chart-bar" style="width: 80%"></div>
+                            </div>
+                            <div class="kpi-detail">Para cada R$1 investido</div>
+                        </div>
+                        
+                        <div class="kpi-card">
+                            <div class="kpi-header">
+                                <h5>Retenção</h5>
+                                <span class="kpi-trend up">+15%</span>
+                            </div>
+                            <div class="kpi-value">76%</div>
+                            <div class="kpi-chart">
+                                <div class="chart-bar" style="width: 76%"></div>
+                            </div>
+                            <div class="kpi-detail">Clientes retidos</div>
+                        </div>
+                        
+                        <div class="kpi-card">
+                            <div class="kpi-header">
+                                <h5>Novos Clientes</h5>
+                                <span class="kpi-trend up">+42%</span>
+                            </div>
+                            <div class="kpi-value">58</div>
+                            <div class="kpi-chart">
+                                <div class="chart-bar" style="width: 65%"></div>
+                            </div>
+                            <div class="kpi-detail">Este mês</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Recomendações -->
+                    <div class="recommendations">
+                        <h4><i class="fas fa-lightbulb"></i> Recomendações da Consultoria</h4>
+                        
+                        <div class="recommendation-list">
+                            <div class="recommendation-item">
+                                <div class="rec-icon">
+                                    <i class="fas fa-birthday-cake"></i>
+                                </div>
+                                <div class="rec-content">
+                                    <h5>Otimizar Campanha de Aniversário</h5>
+                                    <p>Aumentar desconto para 35% e enviar 3 dias antes</p>
+                                    <div class="rec-impact">
+                                        <span>Impacto estimado: +18% conversão</span>
+                                    </div>
+                                </div>
+                                <button class="rec-action">Aplicar</button>
+                            </div>
+                            
+                            <div class="recommendation-item">
+                                <div class="rec-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="rec-content">
+                                    <h5>Reduzir Tempo de Espera</h5>
+                                    <p>Adicionar alerta após 20 minutos de espera</p>
+                                    <div class="rec-impact">
+                                        <span>Impacto estimado: -25% reclamações</span>
+                                    </div>
+                                </div>
+                                <button class="rec-action">Aplicar</button>
+                            </div>
+                            
+                            <div class="recommendation-item">
+                                <div class="rec-icon">
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <div class="rec-content">
+                                    <h5>Criar Programa Fidelidade</h5>
+                                    <p>Sistema de pontos para clientes frequentes</p>
+                                    <div class="rec-impact">
+                                        <span>Impacto estimado: +30% retenção</span>
+                                    </div>
+                                </div>
+                                <button class="rec-action">Planejar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Próximas Funcionalidades -->
+                <div class="roadmap">
+                    <h4><i class="fas fa-road"></i> Próximas Funcionalidades</h4>
+                    
+                    <div class="roadmap-items">
+                        <div class="roadmap-item">
+                            <div class="roadmap-status planned">
+                                <span>Planejado</span>
+                            </div>
+                            <div class="roadmap-content">
+                                <h5>Reservas Online</h5>
+                                <p>Sistema de reservas integrado ao WhatsApp</p>
+                                <div class="roadmap-date">Previsto: Dez/2024</div>
+                            </div>
+                        </div>
+                        
+                        <div class="roadmap-item">
+                            <div class="roadmap-status development">
+                                <span>Em Desenvolvimento</span>
+                            </div>
+                            <div class="roadmap-content">
+                                <h5>Pagamento Online</h5>
+                                <p>Pix e cartão direto no pedido</p>
+                                <div class="roadmap-date">Lançamento: Nov/2024</div>
+                            </div>
+                        </div>
+                        
+                        <div class="roadmap-item">
+                            <div class="roadmap-status live">
+                                <span>Ativo</span>
+                            </div>
+                            <div class="roadmap-content">
+                                <h5>IA para Sugestões</h5>
+                                <p>Recomendações personalizadas no cardápio</p>
+                                <div class="roadmap-date">Implementado: Out/2024</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Seção Contato -->
     <section class="contact" id="contato">
